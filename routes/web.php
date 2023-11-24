@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminProfileController;
-use App\Http\Controllers\Admin\AdminTamuController;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\Petugas\PetugasTamuController;
-use App\Http\Controllers\User\TamuController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BulananController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\User\TamuController;
+use App\Http\Controllers\Admin\AdminTamuController;
+use App\Http\Controllers\Admin\AdminProfileController;
+use App\Http\Controllers\Petugas\PetugasTamuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('auth.login');
 });
 
 // Route::get('login', function () {
@@ -55,5 +56,10 @@ Route::group(['middleware' => 'petugas'], function () {
     Route::post('petugas/tamu/edit/{id}', [PetugasTamuController::class, 'update']);
     Route::get('petugas/tamu/delete/{id}', [PetugasTamuController::class, 'delete'])->name('tamu.delete');
 });
+
+// Laporan Bulanan & Cetak
+Route::get('bulanan', [BulananController::class, 'list'])->name('bulanan.list');
+Route::get('bulanan/detail/{bulan}', [BulananController::class, 'show'])->name('bulanan.show');
+Route::get('bulanan/cetak/{bulan}', [BulananController::class, 'cetak'])->name('bulanan.cetak');
 
 Route::post('simpan-tamu', [TamuController::class, 'simpanTamu'])->name('simpan-tamu');

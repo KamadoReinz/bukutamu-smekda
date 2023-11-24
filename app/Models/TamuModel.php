@@ -12,16 +12,26 @@ class TamuModel extends Model
 
     protected $table = 'tamu_models';
 
+    protected $guarded = [
+        'id'
+    ];
+
+    static public function getSingle($id)
+    {
+        return self::find($id);
+    }
+
     static public function getTamu()
     {
         $return = TamuModel::select('tamu_models.*');
-                                if (!empty(Request::get('date')))
-                                {
-                                    $return = $return->whereDate('created_at', '=', Request::get('date'));
-                                }
 
-        $return = $return->orderBy('tamu_models.id', 'desc')
-                            ->paginate(20);
+        if (!empty(Request::get('date'))) {
+            $return = $return->whereDate('created_at', '=', Request::get('date'));
+        }
+
+        $return = $return
+            ->orderBy('id', 'desc')
+            ->paginate(20);
 
         return $return;
     }

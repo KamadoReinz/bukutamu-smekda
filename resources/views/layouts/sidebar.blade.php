@@ -1,4 +1,4 @@
-<aside id="sidebar" class="sidebar">
+<aside id="sidebar" class="sidebar">nav-link
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
@@ -29,12 +29,12 @@
 
 
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#laporan-nav" data-bs-toggle="collapse" href="#">
+                <a class="nav-link {{ Request::segment(2) == 'bulanan' ? '' : 'collapsed' }}" data-bs-target="#laporan-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-card-checklist"></i><span>Laporan</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                <ul id="laporan-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <ul id="laporan-nav" class="nav-content {{ Request::segment(2) == 'bulanan' ? 'show' : 'collapse' }}" data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="">
+                        <a class="{{ Request::segment(2) == 'bulanan' ? 'active' : 'collapsed' }}" href="{{ url('/bulanan') }}">
                             <i class="bi bi-circle"></i><span>Bulanan</span>
                         </a>
                     </li>
@@ -82,12 +82,12 @@
             </li><!-- End Components Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#laporan-nav" data-bs-toggle="collapse" href="#">
+                <a class="nav-link {{ Request::segment(2) == 'bulanan' ? '' : 'collapsed' }}" data-bs-target="#laporan-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-card-checklist"></i><span>Laporan</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="laporan-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="">
+                        <a class="{{ Request::segment(2) == 'bulanan' ? 'active' : 'collapsed' }}" href="{{ url('bulanan') }}">
                             <i class="bi bi-circle"></i><span>Bulanan</span>
                         </a>
                     </li>

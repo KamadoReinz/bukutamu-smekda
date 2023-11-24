@@ -77,10 +77,10 @@
                                     <form action="{{ route('AuthLogin') }}" method="POST" class="row g-3 needs-validation">
                                         {{ csrf_field() }}
                                         <div class="col-12">
-                                            <label for="name" class="form-label fw-bold">Nama Pengguna</label>
+                                            <label for="name" class="form-label fw-bold">Email</label>
                                             <div class="input-group has-validation">
-                                                <input type="text" name="name" class="form-control rounded-pill"
-                                                    id="name" placeholder="Masukkan Nama Pengguna"
+                                                <input type="text" name="email" class="form-control rounded-pill"
+                                                    id="email" placeholder="Masukkan Email"
                                                     autocomplete="name" required>
                                                 <div class="invalid-feedback">Silakan Masukkan Nama Anda.</div>
                                             </div>

@@ -31,7 +31,7 @@ class AuthController extends Controller
 
     public function AuthLogin(Request $request)
     {
-        if (Auth::attempt(['name' => $request->name, 'password' => $request->password]))
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password]))
         {
             if (Auth::user()->role == 1)
             {

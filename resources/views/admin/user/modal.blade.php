@@ -11,11 +11,11 @@
                 @csrf
                 <div class="modal-body">
                     <div class="row pt-2">
-                        <label for="name" class="col-sm-3 col-form-label">Nama Pengguna <small
+                        <label for="name" class="col-sm-3 col-form-label">Nama<small
                                 class="text-danger">*</small> </label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control " name="name" id="name"
-                                placeholder="Masukan Nama Pengguna" autocomplete="name" required>
+                                placeholder="Masukan Nama" autocomplete="name" required>
                         </div>
                     </div>
 
