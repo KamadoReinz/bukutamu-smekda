@@ -1,4 +1,4 @@
-<aside id="sidebar" class="sidebar">nav-link
+<aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
@@ -29,17 +29,20 @@
 
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::segment(2) == 'bulanan' ? '' : 'collapsed' }}" data-bs-target="#laporan-nav" data-bs-toggle="collapse" href="#">
+                <a class="nav-link {{ Request::segment(1) == 'bulanan' ? '' : 'collapsed' }}"
+                    data-bs-target="#bulanan-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-card-checklist"></i><span>Laporan</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                <ul id="laporan-nav" class="nav-content {{ Request::segment(2) == 'bulanan' ? 'show' : 'collapse' }}" data-bs-parent="#sidebar-nav">
+                <ul id="bulanan-nav" class="nav-content {{ Request::segment(1) == 'bulanan' ? '' : 'collapse' }}"
+                    data-bs-parent="#bulanan-nav">
                     <li>
-                        <a class="{{ Request::segment(2) == 'bulanan' ? 'active' : 'collapsed' }}" href="{{ url('/bulanan') }}">
+                        <a class="{{ Request::segment(1) == 'bulanan' ? 'active' : 'collapsed' }}"
+                            href="{{ url('bulanan') }}">
                             <i class="bi bi-circle"></i><span>Bulanan</span>
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li><!-- End Components Nav -->
 
             <li class="nav-item">
                 <a class="nav-link {{ Request::segment(2) == 'user' ? '' : 'collapsed' }}"
@@ -82,17 +85,20 @@
             </li><!-- End Components Nav -->
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::segment(2) == 'bulanan' ? '' : 'collapsed' }}" data-bs-target="#laporan-nav" data-bs-toggle="collapse" href="#">
+                <a class="nav-link {{ Request::segment(1) == 'bulanan' ? '' : 'collapsed' }}"
+                    data-bs-target="#bulanan-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-card-checklist"></i><span>Laporan</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                <ul id="laporan-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <ul id="bulanan-nav" class="nav-content {{ Request::segment(1) == 'bulanan' ? '' : 'collapse' }}"
+                    data-bs-parent="#bulanan-nav">
                     <li>
-                        <a class="{{ Request::segment(2) == 'bulanan' ? 'active' : 'collapsed' }}" href="{{ url('bulanan') }}">
+                        <a class="{{ Request::segment(1) == 'bulanan' ? 'active' : 'collapsed' }}"
+                            href="{{ url('bulanan') }}">
                             <i class="bi bi-circle"></i><span>Bulanan</span>
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li><!-- End Components Nav -->
         @endif
 
     </ul>

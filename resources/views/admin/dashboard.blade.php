@@ -16,7 +16,7 @@
             <div class="card">
 
                 <div class="card-body pb-0">
-                    <h5 class="card-title" style="text-align: center; color: black;">Grafik Tamu Berdasarkan lorem</h5>
+                    <h5 class="card-title" style="text-align: center; color: black;">Grafik Tamu Berdasarkan Waktu</h5>
 
                     <div id="trafficChart"
                         style="min-height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"
@@ -79,12 +79,12 @@
                                             name: 'Hari Ini'
                                         },
                                         {
-                                            value: {{ tamumingguan() }},
-                                            name: 'Minggu Ini'
-                                        },
-                                        {
                                             value: {{ tamubulanan() }},
                                             name: 'Bulan Ini'
+                                        },
+                                        {
+                                            value: {{ tamutahunan() }},
+                                            name: 'Tahun Ini'
                                         }
                                     ]
                                 }]
@@ -115,12 +115,12 @@
             <div class="col-lg-4">
                 <div class="card info-card customers-card">
                     <div class="card-body">
-                        <h5 class="card-title">Tamu Minggu Ini</h5>
+                        <h5 class="card-title">Tamu Bulan Ini</h5>
                         <div class="d-flex align-items-center">
                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"><i
                                     class="bi bi-people"></i></div>
                             <div class="ps-3">
-                                <h6>{{ tamumingguan() }}</h6>
+                                <h6>{{ tamubulanan() }}</h6>
                             </div>
                         </div>
                     </div>
@@ -130,12 +130,12 @@
             <div class="col-lg-4">
                 <div class="card info-card customers-card">
                     <div class="card-body">
-                        <h5 class="card-title">Tamu Bulan Ini</h5>
+                        <h5 class="card-title">Tamu Tahun Ini</h5>
                         <div class="d-flex align-items-center">
                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"><i
                                     class="bi bi-people"></i></div>
                             <div class="ps-3">
-                                <h6>{{ tamubulanan() }}</h6>
+                                <h6>{{ tamutahunan() }}</h6>
                             </div>
                         </div>
                     </div>

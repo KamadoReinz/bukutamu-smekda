@@ -10,6 +10,7 @@ class BulananController extends Controller
 {
     public function list()
     {
+        $data['header_title'] = 'Data Bulanan';
         $bulananTamu = TamuModel::select(
             DB::raw('COUNT(id) as data'),
             DB::raw("DATE_FORMAT(created_at, '%m-%Y') as new_date"),
@@ -20,12 +21,13 @@ class BulananController extends Controller
             ->orderBy('month', 'desc')
             ->get();
     
-        return view('bulanan.list', compact('bulananTamu'));
+        return view('bulanan.list', compact('bulananTamu'), $data);
     }
     
 
     public function show($bulan)
     {
+        $data['header_title'] = 'Detail Bulanan';
         $date = explode('-', $bulan);
         $date_bulan = $date[0];
         $date_tahun = $date[1];
@@ -38,7 +40,7 @@ class BulananController extends Controller
     //     $data['header_title'] = 'List Tamu';
     // });
         
-        return view('bulanan.show', compact('dataTamu'));
+        return view('bulanan.show', compact('dataTamu'), $data);
     }
     
 
