@@ -43,7 +43,7 @@
                             <tr style="text-align: center;">
                                 <th scope="col">#</th>
                                 <th scope="col">Nama</th>
-                                <th scope="col">Alamat</th>
+                                <th scope="col">Asal</th>
                                 <th scope="col">Tujuan</th>
                                 <th scope="col">Dibuat</th>
                                 <th scope="col"></th>
