@@ -27,7 +27,7 @@
                                     <tr style="text-align: center;">
                                         <th>No</th>
                                         <th>Nama</th>
-                                        <th>Alamat</th>
+                                        <th>Asal</th>
                                         <th>Tujuan</th>
                                         <th>Tanggal & Waktu</th>
                                     </tr>
