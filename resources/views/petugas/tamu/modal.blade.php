@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="row pt-2">
-                        <label for="alamat" class="col-sm-3 col-form-label">Alamat <small
+                        <label for="alamat" class="col-sm-3 col-form-label">Asal <small
                                 class="text-danger">*</small>
                         </label>
                         <div class="col-sm-9">
@@ -72,7 +72,7 @@
                         </div>
 
                         <div class="row pt-2">
-                            <label for="alamat" class="col-sm-3 col-form-label">Alamat <small
+                            <label for="alamat" class="col-sm-3 col-form-label">Asal <small
                                     class="text-danger">*</small>
                             </label>
                             <div class="col-sm-9">
